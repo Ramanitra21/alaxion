@@ -4,7 +4,7 @@ const port = 3000; // Port d'écoute
 
 // Route principale
 app.get('/api', (req, res) => {
-    res.send('Hello, World!'); // Réponse avec un message
+    res.send('Hello, Alaxion!'); // Réponse avec un message
 });
 
 // Démarrage du serveur
