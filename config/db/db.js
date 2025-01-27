@@ -1,8 +1,8 @@
 const { Sequelize } = require('sequelize');
 
 // Configuration de la connexion à la base de données avec Sequelize
-const sequelize = new Sequelize('essai', 'root', '', {
-    host: 'localhost',
+const sequelize = new Sequelize('dehe7322_essai', 'dehe7322_gaucher', 'mdv-50U', {
+    host: 'localhost:3306',
     dialect: 'mysql',
     logging: false, // Désactiver les logs SQL pour un affichage plus propre
 });
