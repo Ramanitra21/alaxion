@@ -1,13 +1,14 @@
-const express = require('express'); // Importation d'Express
-const app = express(); // Création de l'application Express
-const port = 3000; // Port d'écoute
+const express = require('express');
+const bodyParser = require('body-parser');
+const route = require('./route/route')
 
-// Route principale
-app.get('/api', (req, res) => {
-    res.send('Hello, Alaxion!'); // Réponse avec un message
-});
+const app = express();
 
-// Démarrage du serveur
-app.listen(port, () => {
-    console.log(`Serveur démarré : http://localhost:${port}`);
+app.use(bodyParser.json());
+
+app.use('/api', route);
+
+// Démarrer le serveur
+app.listen(3000, () => {
+  console.log("Serveur démarré sur le port 3000.");
 });
